@@ -1,0 +1,24 @@
+{% extends 'template_padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+  <h1>Estos son nuestros profesionales</h1>
+  <ul>
+    
+    {% for doctor in doctores %}
+        <li>
+            <a href="{% url 'DetalleDoctor' doctor.id %}">
+                {{doctor}}
+            </a>
+        </li>
+        <div>
+            <button>
+                <a href="{% url 'EliminarDoctor' doctor.id %}" class="btn btn-primary">Eliminar</a>
+            </button>
+            <button>
+                <a href="{% url 'ModificarDoctor' doctor.id %}" class="btn btn-primary">Editar</a>
+            </button>
+        </div>
+</ul>
+{% endblock contenidoQueCambia %}
