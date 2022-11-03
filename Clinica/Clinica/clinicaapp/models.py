@@ -1,5 +1,5 @@
 from django.db import models
-from unittest.util import _MAX_LENGTH
+
 class Turnos(models.Model):
     doctor = models.CharField(max_length=20)
     paciente = models.CharField(max_length=20)
