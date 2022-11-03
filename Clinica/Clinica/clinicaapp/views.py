@@ -1,9 +1,10 @@
+from .forms import PacienteFormulario
+from .models import Doctores
+
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import DeleteView, UpdateView, CreateView
-
-from .models import Doctores, Pacientes, Turnos
 
 def inicio(request):
     
