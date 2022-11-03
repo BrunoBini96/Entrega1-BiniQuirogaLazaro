@@ -1,0 +1,17 @@
+{% extends 'template_padre.html' %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <form action="{% url 'RegistrarDoctor' %}" method="POST">{% csrf_token %}
+
+        {{form.as_p}}
+        <p for="especialidad">Especialidad
+        <select name="doctor.especialidad" id="doctor.especialidad">
+            <option value=1>Clínica Médica</option>
+            <option value=2>Odontologia</option>
+        </p>
+        <input type="submit" value="Registrar"/>
+    </form>
+
+{% endblock contenidoQueCambia %}
