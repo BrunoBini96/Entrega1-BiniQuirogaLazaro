@@ -1,0 +1,14 @@
+{% extends 'template_padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Doctor/a {{doctor.apellido}}</h1>
+
+<h4>Nombre: {{doctor.nombre}}</h4>
+<h4>Apellido: {{doctor.apellido}}</h4>
+<h4>Especialidad: {{doctor.especialidad}}</h4>
+<h4>Consultorio: {{doctor.consultorio}}</h4> 
+           
+{% endblock contenidoQueCambia %}
